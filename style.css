@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e2e2e2;
+}
+
+::-moz-selection {
+  background: #8857dc;
+  color: #fff;
+}
+
+::selection {
+  background: #8857dc;
+  color: #fff;
+}
+
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+  max-width: 100%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  scrollbar-color: #fff #000;
+  scrollbar-width: normal;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 120.1em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #0a0c14;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 2;
+}
+
+ul {
+  list-style: none;
+}
+
+/* START MAIN */
+
+.container {
+  padding: 0 4rem;
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  color: #fff;
+  font-size: 8rem;
+  text-align: center;
+  margin: 10rem 0 7rem;
+}
+
+h2 {
+  color: #fff;
+  font-size: 5rem;
+  font-family: "Bebas Neue", sans-serif;
+  margin-top: 3rem;
+  position: relative;
+  padding-left: 3rem;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  --space: 0.7rem;
+  --space-b: 1rem;
+  top: var(--space);
+  bottom: var(--space-b);
+  left: 0;
+  width: 1rem;
+}
+
+.farms h2::before {
+  background: #ff3939;
+}
+.bizzy h2::before {
+  background: #ffa71a;
+}
+.nft-arena h2::before {
+  background: #27bfe0;
+}
+.zealous h2::before {
+  background: #586dd2;
+}
+.blackice h2::before {
+  background: #c46274;
+}
+.avaulto h2::before {
+  background: #0bcfc8;
+}
+.celestial h2::before {
+  background: #cd0044;
+}
+.crypto h2::before {
+  background: #5c47ea;
+}
+.algo h2::before {
+  background: #37dd5f;
+}
+.hookahs h2::before {
+  background: #f40023;
+}
+.dreamers h2::before {
+  background: #930fea;
+}
+.blockedframe h2::before {
+  background: #ffd24c;
+}
+.nvode h2::before {
+  background: #27bfe0;
+}
+.mosqato h2::before {
+  background: #666ffe;
+}
+.wagmi h2::before {
+  background: #36b1bf;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+}
+
+.card .img-container {
+  position: relative;
+}
+
+.card .img-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card .img-container::before {
+  content: "";
+  position: absolute;
+  background: url(images/eye.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 54px;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .img-container::before,
+.card:hover .img-container::after {
+  opacity: 1;
+}
+
+footer {
+  background: rgb(2, 3, 5);
+  margin-top: 8rem;
+}
+
+footer .container {
+  text-align: center;
+  --padding: 2.5rem;
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+}
+
+footer .container p {
+  font-size: 1.4rem;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+footer .container a {
+  font-size: 1.4rem;
+  color: #62627e;
+  font-family: sans-serif;
+  transition: color 0.3s ease;
+}
+
+footer .container a:hover {
+  color: #484861;
+}
+
+.card.farms .heart {
+  position: absolute;
+  top: -11rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 18rem;
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 10rem;
+  }
+
+  h1 {
+    margin: 12rem 0 15rem;
+  }
+
+  .card.farms {
+    position: relative;
+  }
+
+  .card.farms .heart {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .card.farms .heart {
+    width: 13rem;
+    top: -8rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .card.farms .heart {
+    width: 10rem;
+    top: -7rem;
+  }
+}
